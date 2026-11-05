@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karaoke-mvp"
+version = "1.0.0"
+description = "MVP de karaokê com pontuação em tempo real via MIDI .kar e microfone"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Karaoke MVP" }]
+dependencies = [
+    "mido==1.3.3",
+    "numpy>=1.24,<3.0",
+    "PyAudio==0.2.14",
+    "pygame==2.6.1",
+]
+
+[project.optional-dependencies]
+aubio = ["aubio>=0.4.9"]
+dev = ["pytest>=8,<9"]
+build = ["pyinstaller>=6,<7"]
+
+[project.scripts]
+karaoke = "karaoke.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["karaoke*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

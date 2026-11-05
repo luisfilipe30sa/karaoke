@@ -1,0 +1,3 @@
+# Opcional. O backend YIN em NumPy é o padrão e não exige compilador.
+# Em Windows/algumas versões do Python pode ser necessário ter build tools.
+aubio>=0.4.9

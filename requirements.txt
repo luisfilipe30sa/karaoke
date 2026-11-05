@@ -1,0 +1,6 @@
+# Dependências de execução do MVP.
+# Python 3.10+ (3.10, 3.11 e 3.12 têm melhor cobertura de wheels nativos).
+mido==1.3.3
+numpy>=1.24,<3.0
+PyAudio==0.2.14
+pygame==2.6.1
